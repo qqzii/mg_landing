@@ -1,0 +1,29 @@
+<template lang="pug">
+  .footer(
+    :style="{ backgroundImage: `url(${require('@/assets/images/3.png')})`}"
+  )
+    .footer__mask
+      .content
+        .footer__content
+          h3.footer__title Свяжитесь с нами
+          .footer__call-us
+            p.call-us__text Записаться на консультацию, вступительные экзамены можно по форме или по телефону, EMAIL
+            button.call_us__button Заполнить форму
+          .footer__contacts
+            .contacts__contact
+              img.contact__img(
+                :src="`../../../assets/images/phone.png`"
+              )
+              h4.contact__value +375-29-348-01-83
+            .contacts__contact
+              img(
+                :src="`../../../assets/images/email.png`"
+              )
+              h4.contact__value itsimpe@gmail.com
+</template>
+
+<script>
+export default {
+  name: "CallUs"
+}
+</script>
