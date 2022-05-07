@@ -1,6 +1,6 @@
 <template lang="pug">
   .header(
-    :style="{ backgroundImage: `url(${require('@/assets/images/1.png')})`}"
+    :style="{ backgroundImage: `url(${require('@/assets/images/backgrounds/header.png')})`}"
   )
     .header__mask
       .content

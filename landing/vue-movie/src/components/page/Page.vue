@@ -5,6 +5,7 @@
     Specialty
     ForApplicants
     CallUs
+    Cellar
 </template>
 
 <script>
@@ -13,8 +14,9 @@ import AboutUs from "@/components/blocks/AboutUs/AboutUs";
 import ForApplicants from "@/components/blocks/ForApplicants/ForApplicants";
 import CallUs from "@/components/blocks/CallUs/CallUs";
 import Specialty from "@/components/blocks/Specialty/Specialty";
+import Cellar from "@/components/blocks/Cellar/Cellar";
 export default {
   name: "Page",
-  components: {Specialty, CallUs, ForApplicants, AboutUs, Header}
+  components: {Cellar, Specialty, CallUs, ForApplicants, AboutUs, Header}
 }
 </script>

@@ -9,7 +9,6 @@
     )
       .object__text(
         v-for="item in info.text"
-        :key="item"
       )
         span.list__dot.for-applicants__dot.fa.fa-dot-circle-o
         span {{ item }}

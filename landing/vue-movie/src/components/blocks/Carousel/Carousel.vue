@@ -4,12 +4,13 @@
     tabindex="0"
   )
     slot
-    button.btn.btn-next(
-      @click.prevent="next"
-    ) next
-    button.btn.btn-prev(
-      @click.prevent="prev"
-    ) prev
+    .carousel__switchers
+      span.fa.fa-angle-left.carousel__button.carousel__button-next(
+        @click.prevent="next"
+      )
+      span.fa.fa-angle-right.carousel__button.carousel__button-prev(
+        @click.prevent="prev"
+      )
 </template>
 
 <script>
@@ -24,39 +25,39 @@ export default {
   },
   computed: {
     slidesLength() {
-      return this.slides.length;
+      return this.slides.length
     }
   },
   mounted(){
-    this.slides = this.$children;
-    this.slides.map( (slide,index) => {
-      slide.index = index;
-    });
+    this.slides = this.$children
+    this.slides.map((slide,index) => {
+      slide.index = index
+    })
   },
   methods: {
-    next(){
-      this.index++;
-      if(this.index >= this.slidesLength){
-        this.index = 0;
-      }
-      this.slideDirection = 'slide-right';
-    },
     prev(){
-      this.index--;
-      if(this.index < 0){
-        this.index = this.slidesLength - 1;
+      this.index++
+      if(this.index >= this.slidesLength){
+        this.index = 0
       }
-      this.slideDirection = 'slide-left';
+      this.slideDirection = 'slide-right'
+    },
+    next(){
+      this.index--
+      if(this.index < 0){
+        this.index = this.slidesLength - 1
+      }
+      this.slideDirection = 'slide-left'
     },
     checkSlide(event){
       if(event.keyCode === 39){
-        this.next();
+        this.next()
       }else if (event.keyCode === 37){
-        this.prev();
+        this.prev()
       } else {
-        return 0;
+        return 0
       }
-    },
+    }
   }
 }
 </script>

@@ -8,7 +8,6 @@
     .cap__link-list
       .link-list__link(
         v-for="link in linkList"
-        :key="link"
       ) {{link}}
 </template>
 

@@ -1,6 +1,6 @@
 <template lang="pug">
   .specialty(
-    :style="{ backgroundImage: `url(${require('@/assets/images/2.png')})`}"
+    :style="{ backgroundImage: `url(${require('@/assets/images/backgrounds/specialty.png')})`}"
   )
     .specialty__top-mask
       .specialty__bottom-mask
@@ -14,20 +14,33 @@
               Direction(
                 v-for="direction in directions"
                 :direction="direction"
-                :key="direction"
               )
             .specialty__we-learn.specialty__teachers
               h5.we-learn__title Преподавательский состав
               p.we-learn__text.teachers__text Почему мы? Неужели мы учим лучше остальных? Наши преподаватели - люди с реальным опытом разработки. Кроме сухого материала и линейных методических указаний - рассказ о реальном опыте, советы и рекомендации
-            Carousel
-              CarouselSlide.carousel-slider(
+            Carousel.specialty__carousel
+              CarouselSlide.carousel-sliders(
                 v-for="slide in slides"
-                :key="slide"
+                :key="slide.id"
               )
-                img(
-                  :src="slide"
-                  :alt="slide"
-                )
+                .carousel-slider__secondary
+                  img.carousel-slider__img(
+                    :src="prevSlide(slide.id).imageUrl"
+                  )
+                  p.carousel-slider__name {{ prevSlide(slide.id).name }}
+                  p.carousel-slider__subject {{ prevSlide(slide.id).subject }}
+                .carousel-slider__main
+                  img.carousel-slider__img(
+                    :src="slide.imageUrl"
+                  )
+                  p.carousel-slider__name {{ slide.name }}
+                  p.carousel-slider__subject {{ slide.subject }}
+                .carousel-slider__secondary
+                  img.carousel-slider__img(
+                    :src="nextSlide(slide.id).imageUrl"
+                  )
+                  p.carousel-slider__name {{ nextSlide(slide.id).name }}
+                  p.carousel-slider__subject {{ nextSlide(slide.id).subject }}
 </template>
 
 <script>
@@ -40,14 +53,24 @@ export default {
   data(){
     return {
       slides: [
-        'https://picsum.photos/id/230/600/300',
-        'https://picsum.photos/id/231/600/300',
-        'https://picsum.photos/id/232/600/300',
-        'https://picsum.photos/id/233/600/300',
-        'https://picsum.photos/id/234/600/300',
-        'https://picsum.photos/id/235/600/300',
-        'https://picsum.photos/id/236/600/300',
+        {id: 1, name: 'Азявчиков Илья Вадимович', subject: 'прикладная информатика', imageUrl: '../../../assets/images/teachers/Azyauchikau.jpg'},
+        {id: 2, name: 'Морозов Артемий Дмитриевич', subject: 'прикладная математика', imageUrl: '../../../assets/images/teachers/Marozau.png'},
+        {id: 3, name: 'Величко Александр Геннадьевич', subject: 'председатель совета директоров', imageUrl: '../../../assets/images/teachers/Velichka.jpg'},
+        {id: 4, name: 'Величко Павел Александрович', subject: 'административный директор', imageUrl: '../../../assets/images/teachers/Velichka-jr.jpg'},
+        {id: 5, name: 'Прудников Александр Александрович', subject: 'член совета директоров', imageUrl: '../../../assets/images/teachers/Prudnikau.jpg'},
       ]
+    }
+  },
+  methods: {
+    prevSlide(mainImageId) {
+      return mainImageId !== 1 ?
+          this.slides.find(slide => slide.id === mainImageId - 1) :
+          this.slides[this.slides.length - 1]
+    },
+    nextSlide(mainImageId) {
+      return this.slides.length !== mainImageId ?
+          this.slides.find(slide => slide.id === mainImageId + 1) :
+          this.slides[0]
     }
   },
   computed: {
@@ -73,54 +96,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.app {
-  display:flex;
-  justify-content: center;
-}
-.carousel {
-  position:relative;
-  overflow: hidden;
-  width:800px;
-  height:500px;
-  z-index:10;
-}
-.btn {
-  padding:5px 10px;
-  background-color:rgba(0,0,0,0.5);
-  border:1px solid transparent;
-  margin:5px 10px;
-  color:#FFF;
-  height:50px;
-  width:50px;
-  position:absolute;
-  margin-top:-25px;
-  z-index:2;
-}
-.btn:hover {
-  cursor: pointer;
-}
-.btn:focus{
-  outline:none;
-}
-.btn-next {
-  top:50%;
-  right:0;
-}
-.btn-prev {
-  top:50%;
-  left:0;
-}
-.carousel-slider {
-  position:absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  right:0;
-}
-.carousel-slider img {
-  width:100%;
-  height:100%;
-}
-</style>

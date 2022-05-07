@@ -1,6 +1,6 @@
 <template lang="pug">
   .footer(
-    :style="{ backgroundImage: `url(${require('@/assets/images/3.png')})`}"
+    :style="{ backgroundImage: `url(${require('@/assets/images/backgrounds/call-us.png')})`}"
   )
     .footer__mask
       .content
@@ -8,7 +8,9 @@
           h3.footer__title Свяжитесь с нами
           .footer__call-us
             p.call-us__text Записаться на консультацию, вступительные экзамены можно по форме или по телефону, EMAIL
-            button.call_us__button Заполнить форму
+            a.call_us__button(
+              :href="`https://forms.gle/JXvmCF2vz1oANh4L9`"
+            ) Заполнить форму
           .footer__contacts
             .contacts__contact
               img.contact__img(

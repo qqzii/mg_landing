@@ -5,7 +5,6 @@
       InfoRow(
         v-for="row in infoRows"
         :info="row"
-        :key="row"
       )
       .about-us__organizations
         h4.row__title Студенческие организации
@@ -13,7 +12,6 @@
           p.organizations__text В нашем колледже каждый сможет найти себе занятие по душе не только во время обучения, но и в свободное время
           .organizations__list(
             v-for="organization in organizationList"
-            :key="organization"
           )
             span.list__dot.fa.fa-dot-circle-o
             span {{ organization }}
