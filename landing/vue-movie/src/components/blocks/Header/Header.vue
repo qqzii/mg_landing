@@ -4,7 +4,9 @@
   )
     .header__mask
       .content
-        Cap
+        Cap(
+          @scroll='scrollToChapter'
+        )
         .header__invite
           h3.invite__title Пройди обучение
           p.invite__text Стань востребованным it специалистом
@@ -16,6 +18,13 @@
 import Cap from "@/components/blocks/Header/Cap/Cap";
 export default {
   name: "Header",
-  components: {Cap}
+  components: {Cap},
+  methods: {
+    scrollToChapter(data) {
+      this.$emit('scroll', {
+        data
+      })
+    }
+  }
 }
 </script>

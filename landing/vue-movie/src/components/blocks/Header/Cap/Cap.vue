@@ -6,9 +6,10 @@
         :src="`../../../assets/images/ico.png`"
       )
     .cap__link-list
-      .link-list__link(
+      a.link-list__link(
         v-for="link in linkList"
-      ) {{link}}
+        @click="scroll(link.routeName)"
+      ) {{link.title}}
 </template>
 
 <script>
@@ -17,12 +18,18 @@ export default {
   computed: {
     linkList() {
       return [
-          'Главная',
-          'О нас',
-          'Специальности',
-          'Абитуриентам',
-          'Контакты'
+        {title: 'О нас', routeName: 'about-us'},
+        {title: 'Специальности', routeName: 'specialty'},
+        {title: 'Абитуриентам', routeName: 'for-applicants'},
+        {title: 'Контакты', routeName: 'call-us'},
       ]
+    }
+  },
+  methods: {
+    scroll(route) {
+      this.$emit('scroll', {
+        scrollTo: route
+      })
     }
   }
 }
