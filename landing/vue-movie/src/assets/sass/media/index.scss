@@ -1,0 +1,91 @@
+@media screen and (max-width: 1200px) {
+  .content {
+    width: 960px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .content {
+    width: 720px;
+  }
+
+  .specialty__directions {
+    justify-content: center;
+    gap: 40px;
+
+    .direction {
+      width: 40%;
+    }
+  }
+
+  .specialty__we-learn {
+    flex-wrap: wrap;
+
+    .we-learn__title {
+      width: auto;
+    }
+
+    .we-learn__text {
+      width: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    width: 540px;
+  }
+
+  .specialty {
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .content {
+    width: 320px;
+  }
+
+  .specialty__directions {
+    .direction {
+      width: 100%;
+    }
+  }
+
+  .info__row {
+    flex-wrap: wrap;
+
+    .row__title {
+      width: auto;
+    }
+
+    .row__text {
+      width: auto;
+    }
+
+    .row__object {
+      width: auto;
+    }
+  }
+
+  .for-applicants__title,
+  .specialty__title,
+  .about-us__title,
+  .footer__title {
+    font-size: 40px;
+  }
+
+  .call-us__text {
+    font-size: 24px;
+  }
+  .call_us__button {
+    font-size: 20px;
+  }
+  .contacts__contact {
+    align-items: center;
+    column-gap: 12px;
+  }
+  .contact__value {
+    font-size: 24px;
+  }
+}
