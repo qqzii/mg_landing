@@ -4,7 +4,7 @@
     p.row__text(
       v-if="textIsObject"
     ) {{info.text}}
-    .row__object(
+    .row__text(
       v-else
     )
       .object__text(

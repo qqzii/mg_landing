@@ -1,11 +1,31 @@
 .page__content
-  width: 1920px
+  //width: 1920px
   margin: 0 auto
+  width: 100%
+  overflow: hidden
 
 .content
-  width: 1170px
   margin: 0 auto
+  @media (min-width: 360px)
+    padding: 0 12px
+  @media (min-width: 576px)
+    padding: 0 20px
+  @media (min-width: 768px)
+    padding: 0 25px
+  @media (min-width: 922px)
+    padding: 0 60px
+  @media (min-width: 1440px)
+    padding: 0 105px
+  @media (min-width: 1920px)
+    padding: 0 235px
 
 .list__dot
   color: #F57F31
-  margin-right: 12px
+  @media (min-width: 360px)
+    margin-right: 5px
+  @media (min-width: 576px)
+    margin-right: 7px
+  @media (min-width: 922px)
+    margin-right: 10px
+  @media (min-width: 1200px)
+    margin-right: 12px

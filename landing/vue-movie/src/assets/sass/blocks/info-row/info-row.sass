@@ -1,32 +1,80 @@
 .info__row
-  margin-top: 50px
   display: flex
-  align-items: center
   justify-content: space-between
   font-family: 'Source Sans Pro', sans-serif
-  border-bottom: solid 9px #F6DBBC
-  padding-bottom: 60px
+  @media (min-width: 360px)
+    flex-direction: column
+    margin-top: 10px
+    border-bottom: solid 3px #F6DBBC
+    padding-bottom: 15px
+  @media (min-width: 576px)
+    margin-top: 15px
+    padding-bottom: 20px
+  @media (min-width: 768px)
+    flex-direction: row
+    align-items: center
+    border-bottom: solid 4px #F6DBBC
+    padding-bottom: 20px
+  @media (min-width: 922px)
+    padding-bottom: 25px
+  @media (min-width: 1200px)
+    margin-top: 20px
+    border-bottom: solid 5px #F6DBBC
+    padding-bottom: 30px
+  @media (min-width: 1440px)
+    margin-top: 25px
+    border-bottom: solid 6px #F6DBBC
+    padding-bottom: 40px
+  @media (min-width: 1920px)
+    margin-top: 30px
+    border-bottom: solid 7px #F6DBBC
+    padding-bottom: 50px
 
 .info__row:last-child
   border: 0
 
 .row__title
-  width: 50%
-  font-size: 43px
-  font-weight: 600
   color: #393939
+  @media (min-width: 360px)
+    font-size: 14px
+    font-weight: 500
+  @media (min-width: 576px)
+    font-size: 20px
+  @media (min-width: 768px)
+    width: 50%
+    font-size: 22px
+    font-weight: 600
+  @media (min-width: 922px)
+    font-size: 24px
+  @media (min-width: 1200px)
+    font-size: 33px
+  @media (min-width: 1440px)
+    font-size: 37px
+  @media (min-width: 1920px)
+    font-size: 44px
 
 .row__text
-  width: 45%
-  font-size: 24px
-  font-weight: 400
   color: #3A3A3A
-
-.row__object
-  width: 45%
-  font-size: 24px
-  font-weight: 400
-  color: #3A3A3A
+  @media (min-width: 360px)
+    margin-top: 10px
+    font-size: 10px
+    font-weight: 300
+  @media (min-width: 576px)
+    margin-top: 15px
+    font-size: 15px
+  @media (min-width: 768px)
+    width: 45%
+    margin-top: 0
+    font-size: 12px
+    font-weight: 400
+  @media (min-width: 922px)
+    font-size: 13px
+  @media (min-width: 1200px)
+    font-size: 18px
+  @media (min-width: 1440px)
+    font-size: 21px
+  @media (min-width: 1920px)
+    font-size: 24px
 
 .object__text
   display: flex
