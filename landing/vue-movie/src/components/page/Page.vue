@@ -1,15 +1,15 @@
 <template lang="pug">
   .page__content
-    Header(@scroll='scrollChapter')
+    header(@scroll='scrollChapter')
     #about-us
-    AboutUs
+    about-us
     #specialty
-    Specialty
+    specialty
     #for-applicants
-    ForApplicants
+    for-applicants
     #call-us
-    CallUs
-    Cellar
+    call-us
+    cellar
 </template>
 
 <script>

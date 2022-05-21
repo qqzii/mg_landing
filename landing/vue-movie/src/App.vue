@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    Page
+    page
 </template>
 
 <script>

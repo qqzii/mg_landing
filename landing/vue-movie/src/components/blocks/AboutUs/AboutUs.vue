@@ -2,7 +2,7 @@
   .about-us
     .content
       .about-us__title Почему мы?
-      InfoRow(v-for="row in infoRows" :info="row")
+      info-row(v-for="row in infoRows" :info="row")
       .about-us__organizations
         h4.row__title Студенческие организации
         .organizations__description

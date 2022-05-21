@@ -9,12 +9,12 @@
               h5.we-learn__title Срок обучения после 9 классов - 3 года
               p.we-learn__text Обучение по 3 направлениям
             .specialty__directions.directions-media
-              Direction(v-for="direction in directions" :direction="direction")
+              direction(v-for="direction in directions" :direction="direction")
             .specialty__we-learn.specialty__teachers
               h5.we-learn__title Преподаватели
               p.we-learn__text.teachers__text В CCCT преподают специалисты с реальным опытом разработки и внедрения, а так же американские спикеры
-            Carousel.specialty__carousel
-              CarouselSlide.carousel-sliders(v-for="slide in slides" :key="slide.id")
+            carousel.specialty__carousel
+              carousel-slide.carousel-sliders(v-for="slide in slides" :key="slide.id")
                 .carousel-slider__secondary
                   img.carousel-slider__img(:src="prevSlide(slide.id).imageUrl")
                   p.carousel-slider__name {{ prevSlide(slide.id).name }}

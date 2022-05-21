@@ -2,7 +2,7 @@
   .header(:style="{ backgroundImage: `url(${require('@/assets/images/backgrounds/header.png')})`}")
     .header__mask
       .content
-        Cap(@scroll='scrollToChapter')
+        cap(@scroll='scrollToChapter')
         .header__invite
           h3.invite__title Cambridge College of Computer Technology
           p.invite__text совместно с ЧУО "Мужская гимназия" объявляет ограниченный набор абитуриентов на 2022/23 учебный год

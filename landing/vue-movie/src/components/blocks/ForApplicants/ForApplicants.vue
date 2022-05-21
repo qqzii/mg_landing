@@ -2,10 +2,10 @@
   .for-applicants
     .content
       .for-applicants__title Абитуриентам
-      InfoRow(v-for="row in infoRows" :info="row")
+      info-row(v-for="row in infoRows" :info="row")
       h3.for-applicants__subtitle.row__title.subtitle-text-align_center Стоимость
       .for-applicants__direction.directions-media
-        Direction(v-for="payment in payments" :direction="payment")
+        direction(v-for="payment in payments" :direction="payment")
 </template>
 
 <script>
