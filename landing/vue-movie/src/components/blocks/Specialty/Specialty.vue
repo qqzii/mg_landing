@@ -1,44 +1,30 @@
 <template lang="pug">
-  .specialty(
-    :style="{ backgroundImage: `url(${require('@/assets/images/backgrounds/specialty.png')})`}"
-  )
+  .specialty(:style="{ backgroundImage: `url(${require('@/assets/images/backgrounds/specialty.png')})`}")
     .specialty__top-mask
       .specialty__bottom-mask
         .content
           .specialty__content
             h3.specialty__title Специальности
             .specialty__we-learn
-              h5.we-learn__title Чему мы учим?
-              p.we-learn__text На выбор абитуриентам три направления
-            .specialty__directions
-              Direction(
-                v-for="direction in directions"
-                :direction="direction"
-              )
+              h5.we-learn__title Срок обучения после 9 классов - 3 года
+              p.we-learn__text Обучение по 3 направлениям
+            .specialty__directions.directions-media
+              Direction(v-for="direction in directions" :direction="direction")
             .specialty__we-learn.specialty__teachers
-              h5.we-learn__title Преподавательский состав
-              p.we-learn__text.teachers__text Почему мы? Неужели мы учим лучше остальных? Наши преподаватели - люди с реальным опытом разработки. Кроме сухого материала и линейных методических указаний - рассказ о реальном опыте, советы и рекомендации
+              h5.we-learn__title Преподаватели
+              p.we-learn__text.teachers__text В CCCT преподают специалисты с реальным опытом разработки и внедрения, а так же американские спикеры
             Carousel.specialty__carousel
-              CarouselSlide.carousel-sliders(
-                v-for="slide in slides"
-                :key="slide.id"
-              )
+              CarouselSlide.carousel-sliders(v-for="slide in slides" :key="slide.id")
                 .carousel-slider__secondary
-                  img.carousel-slider__img(
-                    :src="prevSlide(slide.id).imageUrl"
-                  )
+                  img.carousel-slider__img(:src="prevSlide(slide.id).imageUrl")
                   p.carousel-slider__name {{ prevSlide(slide.id).name }}
                   p.carousel-slider__subject {{ prevSlide(slide.id).subject }}
                 .carousel-slider__main
-                  img.carousel-slider__img(
-                    :src="slide.imageUrl"
-                  )
+                  img.carousel-slider__img(:src="slide.imageUrl")
                   p.carousel-slider__name {{ slide.name }}
                   p.carousel-slider__subject {{ slide.subject }}
                 .carousel-slider__secondary
-                  img.carousel-slider__img(
-                    :src="nextSlide(slide.id).imageUrl"
-                  )
+                  img.carousel-slider__img(:src="nextSlide(slide.id).imageUrl")
                   p.carousel-slider__name {{ nextSlide(slide.id).name }}
                   p.carousel-slider__subject {{ nextSlide(slide.id).subject }}
 </template>
@@ -53,11 +39,18 @@ export default {
   data(){
     return {
       slides: [
-        {id: 1, name: 'Азявчиков Илья Вадимович', subject: 'прикладная информатика', imageUrl: '../../../assets/images/teachers/Azyauchikau.jpg'},
-        {id: 2, name: 'Морозов Артемий Дмитриевич', subject: 'прикладная математика', imageUrl: '../../../assets/images/teachers/Marozau.png'},
-        {id: 3, name: 'Величко Александр Геннадьевич', subject: 'председатель совета директоров', imageUrl: '../../../assets/images/teachers/Velichka.jpg'},
-        {id: 4, name: 'Величко Павел Александрович', subject: 'административный директор', imageUrl: '../../../assets/images/teachers/Velichka-jr.jpg'},
-        {id: 5, name: 'Прудников Александр Александрович', subject: 'член совета директоров', imageUrl: '../../../assets/images/teachers/Prudnikau.jpg'},
+        {id: 1, name: 'Илья Азявчиков', subject: 'прикладная информатика', imageUrl: '../../../assets/images/teachers/Azyauchikau.jpg'},
+        {id: 2, name: 'Артемий Морозов', subject: 'PHP/Python', imageUrl: '../../../assets/images/teachers/Marozau.png'},
+        {id: 3, name: 'Егор Петрико', subject: 'UX/UI Design', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
+        {id: 4, name: 'Федор Стежко', subject: 'адаптивная верстка', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
+        {id: 5, name: 'Александр Бабук', subject: 'английский язык', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
+        {id: 6, name: 'Марк Величко', subject: 'высшая математика', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
+        {id: 7, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
+        {id: 8, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
+        {id: 9, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
+        {id: 10, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
+        {id: 11, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
+        {id: 12, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'}
       ]
     }
   },
@@ -78,18 +71,33 @@ export default {
       return {
         frontend: {
           imageUrl: '../../../assets/images/directions/frontend.png',
-          title: 'Web-designe/FrontEnd',
-          text: 'направление для тех, кто хочет делать веб-пространство более приятным глазу'
+          title: 'Web-design/FrontEnd',
+          text: [
+            'Algorithms',
+            'UI/UX Design',
+            'Адаптивная верстка (HTML, CSS, JS)',
+            'Психология веб-дизайна'
+          ]
         },
         backend: {
           imageUrl: '../../../assets/images/directions/backend.png',
           title: 'BackEnd',
-          text: 'для тех, кому интересна техническая сторона всемирной Паутины'
+          text: [
+            'Algorithms',
+            'С/С++',
+            'PHP/C#/Java',
+            'Работа с базами данных (MySQL, MongoDB, PostgreSQL)'
+          ]
         },
         datascience: {
           imageUrl: '../../../assets/images/directions/datascience.png',
           title: 'Data Science',
-          text: 'курс для любителей математики.  Нацелен на обучение специалистов в сфере Big Data и Machine learning'
+          text: [
+            'Algorithms',
+            'Высшая математика',
+            'C/C++',
+            'Python/R/MATLAB'
+          ]
         }
       }
     }

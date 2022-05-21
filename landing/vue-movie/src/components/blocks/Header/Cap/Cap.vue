@@ -1,15 +1,10 @@
 <template lang="pug">
   .cap
     .cap__logo
-      h1.logo__title itsimple
-      img.logo__img(
-        :src="`../../../assets/images/ico.png`"
-      )
+      h1.logo__title ccct
+      img.logo__img(:src="`../../../assets/images/ico.png`")
     .cap__link-list
-      a.link-list__link(
-        v-for="link in linkList"
-        @click="scroll(link.routeName)"
-      ) {{link.title}}
+      a.link-list__link(v-for="link in linkList" @click="scroll(link.routeName)") {{link.title}}
 </template>
 
 <script>
@@ -18,10 +13,10 @@ export default {
   computed: {
     linkList() {
       return [
-        {title: 'О нас', routeName: 'about-us'},
+        {title: 'Почему мы', routeName: 'about-us'},
         {title: 'Специальности', routeName: 'specialty'},
         {title: 'Абитуриентам', routeName: 'for-applicants'},
-        {title: 'Контакты', routeName: 'call-us'},
+        {title: 'Подать заявку', routeName: 'call-us'},
       ]
     }
   },

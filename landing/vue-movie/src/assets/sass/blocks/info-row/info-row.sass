@@ -15,7 +15,7 @@
     align-items: center
     border-bottom: solid 4px #F6DBBC
     padding-bottom: 20px
-  @media (min-width: 922px)
+  @media (min-width: 992px)
     padding-bottom: 25px
   @media (min-width: 1200px)
     margin-top: 20px
@@ -44,7 +44,7 @@
     width: 50%
     font-size: 22px
     font-weight: 600
-  @media (min-width: 922px)
+  @media (min-width: 992px)
     font-size: 24px
   @media (min-width: 1200px)
     font-size: 33px
@@ -67,7 +67,7 @@
     margin-top: 0
     font-size: 12px
     font-weight: 400
-  @media (min-width: 922px)
+  @media (min-width: 992px)
     font-size: 13px
   @media (min-width: 1200px)
     font-size: 18px
@@ -79,3 +79,94 @@
 .object__text
   display: flex
   align-items: center
+
+.row-text__button-menu
+  display: flex
+  flex-direction: column
+  justify-content: center
+  @media (min-width: 360px)
+    align-items: start
+  @media (min-width: 768px)
+    align-items: center
+
+.object-text__button-menu
+  display: flex
+  justify-content: center
+  flex-direction: column
+  background-color: #F6DBBC
+  font-family: 'Source Sans Pro', sans-serif
+  &:hover
+    cursor: pointer
+    background-color: rgba(232, 178, 121, 0.95)
+  @media (min-width: 360px)
+    margin: 2px 0
+    padding: 4px 30px
+    font-size: 10px
+    min-width: 180px
+    border-radius: 5px
+  @media (min-width: 576px)
+    padding: 5px 35px
+    font-size: 16px
+    min-width: 287px
+  @media (min-width: 768px)
+    padding: 6px 18px
+    font-size: 15px
+  @media (min-width: 992px)
+    padding: 7px 31px
+    font-size: 17px
+    min-width: 326px
+    border-radius: 6px
+  @media (min-width: 1200px)
+    margin: 3px 0
+    padding: 8px 55px
+    font-size: 21px
+    min-width: 388px
+  @media (min-width: 1440px)
+    padding: 8px 55px
+    font-size: 24px
+    min-width: 438px
+
+.list__arrow
+  @media (min-width: 360px)
+    font-size: 11px
+    margin: 2px 0 0 5px
+  @media (min-width: 576px)
+    font-size: 16px
+  @media (min-width: 768px)
+    font-size: 15px
+  @media (min-width: 992px)
+    font-size: 18px
+    margin: 3px 0 0 6px
+  @media (min-width: 1200px)
+    font-size: 21px
+    margin: 4px 0 0 6px
+  @media (min-width: 1440px)
+    font-size: 23px
+    margin: 5px 0 0 7px
+
+.list__pop-down-text_enable
+  text-align: center
+  @media (min-width: 360px)
+    font-size: 7px
+    max-width: 180px
+  @media (min-width: 576px)
+    font-size: 10px
+    max-width: 283px
+  @media (min-width: 768px)
+    font-size: 13px
+    font-weight: 300
+  @media (min-width: 992px)
+    font-size: 14px
+    max-width: 326px
+  @media (min-width: 1200px)
+    font-size: 17px
+    max-width: 388px
+  @media (min-width: 1440px)
+    font-size: 20px
+    max-width: 438px
+
+.button-display__block
+  display: block
+
+.button-display__none
+  display: none

@@ -1,16 +1,9 @@
 <template lang="pug">
-  .carousel(
-    @keydown="checkSlide($event)"
-    tabindex="0"
-  )
+  .carousel(@keydown="checkSlide($event)" tabindex="0")
     slot
     .carousel__switchers
-      span.fa.fa-angle-left.carousel__button.carousel__button-next(
-        @click.prevent="next"
-      )
-      span.fa.fa-angle-right.carousel__button.carousel__button-prev(
-        @click.prevent="prev"
-      )
+      span.fa.fa-angle-left.carousel__button.carousel__button-next(@click.prevent="next")
+      span.fa.fa-angle-right.carousel__button.carousel__button-prev(@click.prevent="prev")
 </template>
 
 <script>

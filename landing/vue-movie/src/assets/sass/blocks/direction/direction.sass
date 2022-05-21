@@ -1,30 +1,153 @@
 .direction
   display: flex
   flex-direction: column
-  align-items: center
   text-transform: uppercase
   font-family: 'Oswald', sans-serif
   color: #FFFFFF
-  width: 30%
   background: rgba(180, 130, 80, 0.2)
-  border-radius: 12px
-  padding: 25px 13px 55px 13px
+  margin: 0 auto
+  &:last-child
+    margin-bottom: 0
+  @media (min-width: 360px)
+    width: 55%
+    border-radius: 6px
+    padding: 15px
+    margin-bottom: 20px
+  @media (min-width: 576px)
+    padding: 35px 15px
+    margin-bottom: 30px
+  @media (min-width: 768px)
+    border-radius: 10px
+    padding: 50px 30px
+    margin-bottom: 35px
+  @media (min-width: 992px)
+    width: 30%
+    margin: 0
+    justify-content: space-between
+    padding: 40px 10px
+  @media (min-width: 1200px)
+    padding: 50px 12px
+  @media (min-width: 1440px)
+    padding: 55px 14px
+    border-radius: 12px
+  @media (min-width: 1920px)
+
+
+.directions-media
+  display: flex
+  flex-direction: column
+  @media (min-width: 992px)
+    flex-direction: row
+    justify-content: space-between
 
 .direction:hover
-  transform: scale(1.05)
   background: rgba(197, 176, 176, 0.6)
+  @media (min-width: 768px)
+    transform: scale(1.02)
+  @media (min-width: 992px)
+    transform: scale(1.05)
+
+.direction-for-applicants
+  background-color: #F6DBBC
+  color: #000000
+  .list__dot
+    color: #000000
+  &:hover
+    background-color: rgba(232, 178, 121, 0.95)
+
+.specialty__directions
+  @media (min-width: 360px)
+    margin-top: 90px
+  @media (min-width: 576px)
+  @media (min-width: 768px)
+  @media (min-width: 992px)
+  @media (min-width: 1200px)
+  @media (min-width: 1440px)
+  @media (min-width: 1920px)
+    margin-top: 90px
 
 .direction__img
-  width: 130px
-  height: 130px
+  align-self: center
+  @media (min-width: 360px)
+    width: 60px
+    height: 60px
+  @media (min-width: 576px)
+    width: 90px
+    height: 90px
+  @media (min-width: 768px)
+    width: 120px
+    height: 120px
+  @media (min-width: 1440px)
+    width: 135px
+    height: 135px
+  @media (min-width: 1920px)
+    width: 140px
+    height: 140px
 
 .direction__title
-  margin-top: 20px
-  font-weight: 600
-  font-size: 33px
+  text-align: center
+  @media (min-width: 360px)
+    margin: 10px 0
+    font-weight: 400
+    font-size: 19px
+  @media (min-width: 576px)
+    margin: 15px 0
+    font-size: 26px
+  @media (min-width: 768px)
+    margin: 15px 0 25px 0
+    font-size: 32px
+  @media (min-width: 992px)
+    margin: 10px 0 25px 0
+    font-size: 28px
+  @media (min-width: 1200px)
+    margin: 10px 0 30px 0
+    font-size: 32px
+  @media (min-width: 1440px)
+    font-size: 42px
+    font-weight: 500
+  @media (min-width: 1920px)
+    margin: 15px 0 40px 0
 
 .direction__text
-  margin-top: 65px
-  font-weight: 400
-  font-size: 24px
+  @media (min-width: 360px)
+    font-weight: 400
+    font-size: 13px
+    margin-left: 13px
+  @media (min-width: 576px)
+    font-size: 17px
+    margin-left: 23px
+  @media (min-width: 768px)
+    font-size: 20px
+    margin-left: 43px
+  @media (min-width: 992px)
+    font-size: 18px
+    margin-left: 26px
+  @media (min-width: 1200px)
+    font-size: 22px
+    margin-left: 24px
+  @media (min-width: 1440px)
+    font-size: 26px
+    margin-left: 13px
+
+.direction__price
   text-align: center
+  color: #F57F31
+  @media (min-width: 360px)
+    font-weight: 500
+    font-size: 30px
+    margin-top: 15px
+  @media (min-width: 576px)
+    font-size: 37px
+    margin-top: 20px
+  @media (min-width: 768px)
+    font-size: 45px
+    margin-top: 30px
+  @media (min-width: 1200px)
+    font-size: 50px
+    margin-top: 35px
+  @media (min-width: 1440px)
+    font-size: 60px
+    font-weight: 600
+  @media (min-width: 1920px)
+    font-size: 65px
+    margin-top: 45px

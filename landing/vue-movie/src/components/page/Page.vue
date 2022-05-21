@@ -1,8 +1,6 @@
 <template lang="pug">
   .page__content
-    Header(
-      @scroll='scrollChapter'
-    )
+    Header(@scroll='scrollChapter')
     #about-us
     AboutUs
     #specialty

@@ -1,10 +1,6 @@
 <template lang="pug">
-  transition(
-    :name="dir"
-  )
-    div(
-      v-show="visible"
-    )
+  transition(:name="dir")
+    div(v-show="visible")
       slot
 </template>
 
