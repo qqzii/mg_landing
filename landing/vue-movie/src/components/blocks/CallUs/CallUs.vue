@@ -49,11 +49,13 @@ export default {
       }
       Email.sendMail(params)
         .then(() => {
-
+          this.$toasted.success('Заявка отправлена. Ожидайте звонка')
           this.formName = ''
           this.formPhone = ''
         })
-        .catch(() => {})
+        .catch(() => {
+          this.$toasted.error('Произошла ошибка при отправке заявки')
+        })
     }
   }
 }

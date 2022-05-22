@@ -48,14 +48,14 @@ export default {
         {id: 1, name: 'Илья Азявчиков', subject: 'прикладная информатика', imageUrl: '../../../assets/images/teachers/Azyauchikau.jpg'},
         {id: 2, name: 'Артемий Морозов', subject: 'PHP/Python', imageUrl: '../../../assets/images/teachers/Marozau.png'},
         {id: 3, name: 'Егор Петрико', subject: 'UX/UI Design', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
-        {id: 4, name: 'Федор Стежко', subject: 'адаптивная верстка', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
-        {id: 5, name: 'Александр Бабук', subject: 'английский язык', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
+        {id: 4, name: 'Федор Стежко', subject: 'адаптивная верстка', imageUrl: '../../../assets/images/teachers/stejko.jpg'},
+        {id: 5, name: 'Александр Бабук', subject: 'английский язык', imageUrl: '../../../assets/images/teachers/babuk.jpg'},
         {id: 6, name: 'Марк Величко', subject: 'высшая математика', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
-        {id: 7, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
-        {id: 8, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
-        {id: 9, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
-        {id: 10, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
-        {id: 11, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'}
+        {id: 7, name: 'Haqi Al-Ganabi', subject: 'Основы экономики', imageUrl: '../../../assets/images/teachers/hakui.jpg'},
+        {id: 8, name: 'Dr. Hui Zhang', subject: 'Основы Data Science', imageUrl: '../../../assets/images/teachers/Hui.jpg'},
+        {id: 9, name: 'DR. Gagik Bakhshyan', subject: 'Основы психологии', imageUrl: '../../../assets/images/teachers/gagik.jpg'},
+        {id: 10, name: 'Kaji DahalKaji Dahal', subject: 'Работа с базами данных', imageUrl: '../../../assets/images/teachers/kaji.jpg'},
+        {id: 11, name: 'Suresh Bhattarai', subject: 'Физика', imageUrl: '../../../assets/images/teachers/suressh.jpg'}
       ]
     }
   },
@@ -72,11 +72,11 @@ export default {
       return {
         arrows: this.screenWidth >= SCREEN_WIDTH.widthChangeCarousel,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3500,
         dots: true,
         infinite: true,
         initialSlide: 2,
-        speed: 500,
+        speed: 700,
         slidesToShow: this.screenWidth >= SCREEN_WIDTH.widthChangeCarousel ? 3 : 1,
         slidesToScroll: 1,
         swipeToSlide: true
