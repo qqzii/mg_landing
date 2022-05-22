@@ -13,31 +13,37 @@
             .specialty__info
               h5.specialty__title Преподаватели
               p.specialty__text В CCCT преподают специалисты с реальным опытом разработки и внедрения, а так же американские спикеры
-            Carousel.specialty__carousel
-              CarouselSlide.carousel-sliders(v-for="slide in slides" :key="slide.id")
-                .carousel-slider__secondary
-                  img.carousel-slider__img(:src="prevSlide(slide.id).imageUrl")
-                  p.carousel-slider__name {{ prevSlide(slide.id).name }}
-                  p.carousel-slider__subject {{ prevSlide(slide.id).subject }}
-                .carousel-slider__main
-                  img.carousel-slider__img(:src="slide.imageUrl")
-                  p.carousel-slider__name {{ slide.name }}
-                  p.carousel-slider__subject {{ slide.subject }}
-                .carousel-slider__secondary
-                  img.carousel-slider__img(:src="nextSlide(slide.id).imageUrl")
-                  p.carousel-slider__name {{ nextSlide(slide.id).name }}
-                  p.carousel-slider__subject {{ nextSlide(slide.id).subject }}
+            VueSlickCarousel.specialty__carousel(v-bind="slickSliderSettings")
+              CarouselSlide(:data="slides[0]")
+              CarouselSlide(:data="slides[1]")
+              CarouselSlide(:data="slides[2]")
+              CarouselSlide(:data="slides[3]")
+              CarouselSlide(:data="slides[4]")
+              CarouselSlide(:data="slides[5]")
+              CarouselSlide(:data="slides[6]")
+              CarouselSlide(:data="slides[7]")
+              CarouselSlide(:data="slides[8]")
+              CarouselSlide(:data="slides[9]")
+              CarouselSlide(:data="slides[10]")
 </template>
 
 <script>
 import Direction from "@/components/blocks/Direction/Direction";
-import Carousel from "@/components/blocks/Carousel/Carousel";
 import CarouselSlide from "@/components/blocks/Carousel/CarouselSlide";
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+
+const SCREEN_WIDTH = {
+  widthChangeCarousel: 992
+}
 export default {
   name: "Specialty",
-  components: {CarouselSlide, Carousel, Direction},
+  components: {CarouselSlide, Direction, VueSlickCarousel},
   data(){
     return {
+      screenWidth: window.innerWidth,
+      SCREEN_WIDTH,
       slides: [
         {id: 1, name: 'Илья Азявчиков', subject: 'прикладная информатика', imageUrl: '../../../assets/images/teachers/Azyauchikau.jpg'},
         {id: 2, name: 'Артемий Морозов', subject: 'PHP/Python', imageUrl: '../../../assets/images/teachers/Marozau.png'},
@@ -49,24 +55,33 @@ export default {
         {id: 8, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
         {id: 9, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
         {id: 10, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
-        {id: 11, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'},
-        {id: 12, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'}
+        {id: 11, name: 'Тест Тест', subject: 'тест', imageUrl: '../../../assets/images/teachers/defaultAvatar.jpg'}
       ]
     }
   },
+  created () {
+    window.addEventListener('resize', this.updateScreenWidth)
+  },
   methods: {
-    prevSlide(mainImageId) {
-      return mainImageId !== 1 ?
-          this.slides.find(slide => slide.id === mainImageId - 1) :
-          this.slides[this.slides.length - 1]
-    },
-    nextSlide(mainImageId) {
-      return this.slides.length !== mainImageId ?
-          this.slides.find(slide => slide.id === mainImageId + 1) :
-          this.slides[0]
+    updateScreenWidth() {
+      this.screenWidth = window.innerWidth;
     }
   },
   computed: {
+    slickSliderSettings() {
+      return {
+        arrows: this.screenWidth >= SCREEN_WIDTH.widthChangeCarousel,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true,
+        infinite: true,
+        initialSlide: 2,
+        speed: 500,
+        slidesToShow: this.screenWidth >= SCREEN_WIDTH.widthChangeCarousel ? 3 : 1,
+        slidesToScroll: 1,
+        swipeToSlide: true
+      }
+    },
     directions() {
       return {
         frontend: {

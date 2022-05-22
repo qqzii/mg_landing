@@ -1,24 +1,13 @@
 <template lang="pug">
-  transition(:name="dir")
-    div(v-show="visible")
-      slot
+  .slide
+    img.slide__img(:src="data.imageUrl")
+    p.slide__name {{data.name}}
+    p.slide__subject {{data.subject}}
 </template>
 
 <script>
 export default {
   name: "CarouselSlide",
-  data() {
-    return {
-      index  : 0,
-    }
-  },
-  computed : {
-    visible() {
-      return this.index === this.$parent.index;
-    },
-    dir() {
-      return this.$parent.slideDirection;
-    },
-  }
+  props: ['data']
 }
 </script>
