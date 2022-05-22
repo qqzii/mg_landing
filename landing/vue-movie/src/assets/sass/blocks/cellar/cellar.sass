@@ -1,5 +1,5 @@
 .cellar
-  background: rgba(159, 130, 70, 0.8)
+  background: #111111
   @media (min-width: 360px)
     padding: 8px 20px
   @media (min-width: 576px)
@@ -15,36 +15,168 @@
 
 .cellar__up-content
   display: flex
-  justify-content: space-between
+  flex-direction: column
+  align-items: center
+  .cellar__requisites
+    font-family: 'Oswald', sans-serif
+    color: #FFFFFF
 
-.cellar__up-content > .cellar__text
-  @media (min-width: 360px)
-    padding: 0 4px
-  @media (min-width: 768px)
-    padding: 0 9px
-  @media (min-width: 1200px)
-    padding: 0 12px
 
-.cellar__down-content
+.cellar__title
   @media (min-width: 360px)
-    margin-top: 8px
+    font-size: 16px
+    margin-bottom: 6px
+    font-weight: 400
+  @media (min-width: 576px)
+    font-size: 22px
+    margin-bottom: 8px
   @media (min-width: 768px)
-    margin-top: 15px
+    font-size: 28px
+    margin-bottom: 10px
+  @media (min-width: 992px)
+    font-size: 36px
+    margin-bottom: 13px
   @media (min-width: 1200px)
-    margin-top: 20px
+    font-size: 46px
+    margin-bottom: 17px
+    font-weight: 500
+  @media (min-width: 1440px)
+    font-size: 56px
+    margin-bottom: 20px
 
 .cellar__text
-  text-align: center
-  color: #000000
+  &:last-child
+    margin-bottom: 0
   @media (min-width: 360px)
-    font-size: 5px
+    font-size: 10px
+    margin-bottom: 3px
+    font-weight: 200
   @media (min-width: 576px)
-    font-size: 7px
+    font-size: 14px
+    margin-bottom: 4px
   @media (min-width: 768px)
-    font-size: 9px
+    font-size: 17px
   @media (min-width: 992px)
-    font-size: 11px
+    font-size: 20px
+    margin-bottom: 5px
   @media (min-width: 1200px)
-    font-size: 13px
+    font-size: 26px
+    margin-bottom: 6px
   @media (min-width: 1440px)
-    font-size: 15px
+    font-size: 30px
+    margin-bottom: 8px
+
+
+.cellar__down-content
+  .cellar__socials
+    display: flex
+    justify-content: center
+
+.socials__social
+  border-radius: 50%
+  @media (min-width: 360px)
+    border: 1px solid #FFFFFF
+    margin: 12px 2px 7px 2px
+  @media (min-width: 576px)
+    margin: 14px 3px 9px 3px
+  @media (min-width: 768px)
+    border: 2px solid #FFFFFF
+    margin: 18px 4px 11px 4px
+  @media (min-width: 992px)
+    margin: 20px 5px 12px 5px
+  @media (min-width: 1200px)
+    border: 3px solid #FFFFFF
+    margin: 25px 6px 15px 6px
+  @media (min-width: 1440px)
+    margin: 35px 7px 20px 7px
+  .social-facebook
+    @media (min-width: 360px)
+      font-size: 13px
+    @media (min-width: 576px)
+      font-size: 17px
+    @media (min-width: 768px)
+      font-size: 22px
+    @media (min-width: 992px)
+      font-size: 28px
+    @media (min-width: 1200px)
+      font-size: 36px
+    @media (min-width: 1440px)
+      font-size: 42px
+    &:hover
+      color: #3B5998
+  .social-instagram
+    @media (min-width: 360px)
+      font-size: 14px
+    @media (min-width: 576px)
+      font-size: 19px
+    @media (min-width: 768px)
+      font-size: 25px
+    @media (min-width: 992px)
+      font-size: 32px
+    @media (min-width: 1200px)
+      font-size: 40px
+    @media (min-width: 1440px)
+      font-size: 46px
+    &:hover
+      color: #E15A88
+  .social-telegram
+    @media (min-width: 360px)
+      font-size: 11px
+    @media (min-width: 576px)
+      font-size: 14px
+    @media (min-width: 768px)
+      font-size: 19px
+    @media (min-width: 992px)
+      font-size: 24px
+    @media (min-width: 1200px)
+      font-size: 30px
+    @media (min-width: 1440px)
+      font-size: 36px
+    &:hover
+      color: #00BFFF
+  .social-vk
+    @media (min-width: 360px)
+      font-size: 12px
+    @media (min-width: 576px)
+      font-size: 17px
+    @media (min-width: 768px)
+      font-size: 22px
+    @media (min-width: 992px)
+      font-size: 28px
+    @media (min-width: 1200px)
+      font-size: 36px
+    @media (min-width: 1440px)
+      font-size: 42px
+    &:hover
+      color: #597DA3
+  span
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #FFFFFF
+    @media (min-width: 360px)
+      width: 20px
+      height: 20px
+    @media (min-width: 576px)
+      width: 30px
+      height: 30px
+    @media (min-width: 768px)
+      width: 40px
+      height: 40px
+    @media (min-width: 992px)
+      width: 50px
+      height: 50px
+    @media (min-width: 1200px)
+      width: 60px
+      height: 60px
+    @media (min-width: 1440px)
+      width: 70px
+      height: 70px
+    &:hover
+      cursor: pointer
+
+.cellar__rules
+  font-family: 'Oswald', sans-serif
+  font-weight: 100
+  color: #FFFFFF
+  text-align: center

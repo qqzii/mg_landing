@@ -1,7 +1,7 @@
 <template lang="pug">
   .cap
     .cap__logo
-      h1.logo__title ccct
+      h1.logo__title(@click="scroll('top')") ccct
       img.logo__img(:src="`../../../assets/images/ico.png`")
     .cap__link-list(v-if="screenWidth >= SCREEN_WIDTH.widthChangeBurgerToList")
       a.link-list__link(v-for="link in linkList" @click="scroll(link.routeName)") {{link.title}}
@@ -18,7 +18,7 @@
 <script>
 
 const SCREEN_WIDTH = {
-  widthChangeBurgerToList: 992,
+  widthChangeBurgerToList: 992
 }
 export default {
   name: "Cap",
@@ -29,8 +29,8 @@ export default {
       SCREEN_WIDTH
     }
   },
-  mounted() {
-    window.addEventListener('resize', this.updateScreenWidth);
+  created () {
+    window.addEventListener('resize', this.updateScreenWidth)
   },
   computed: {
     linkList() {

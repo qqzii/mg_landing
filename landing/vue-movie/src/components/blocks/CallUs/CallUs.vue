@@ -3,7 +3,7 @@
     .footer__mask
       .content
         .footer__content
-          h3.footer__title Подать заявку
+          h3.specialty-call-us__title Подать заявку
           .footer__call-us
             p.call-us__text Записаться на консультацию, вступительные экзамены можно по форме или по телефону, EMAIL
             form.call-us__form
@@ -43,7 +43,6 @@ export default {
   },
   methods: {
     sendData() {
-      console.log(this.formName)
       const params = {
         name: this.formName,
         phone: this.formPhone

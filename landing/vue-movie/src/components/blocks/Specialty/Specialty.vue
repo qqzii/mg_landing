@@ -4,15 +4,15 @@
       .specialty__bottom-mask
         .content
           .specialty__content
-            h3.specialty__title Специальности
-            .specialty__we-learn
-              h5.we-learn__title Срок обучения после 9 классов - 3 года
-              p.we-learn__text Обучение по 3 направлениям
+            h3.specialty-call-us__title Специальности
+            .specialty__info
+              h5.specialty__title Срок обучения после 9 классов - 3 года
+              p.specialty__text Обучение по 3 направлениям
             .specialty__directions.directions-media
               Direction(v-for="direction in directions" :direction="direction")
-            .specialty__we-learn.specialty__teachers
-              h5.we-learn__title Преподаватели
-              p.we-learn__text.teachers__text В CCCT преподают специалисты с реальным опытом разработки и внедрения, а так же американские спикеры
+            .specialty__info
+              h5.specialty__title Преподаватели
+              p.specialty__text В CCCT преподают специалисты с реальным опытом разработки и внедрения, а так же американские спикеры
             Carousel.specialty__carousel
               CarouselSlide.carousel-sliders(v-for="slide in slides" :key="slide.id")
                 .carousel-slider__secondary
