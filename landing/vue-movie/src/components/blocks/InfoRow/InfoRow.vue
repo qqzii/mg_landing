@@ -13,7 +13,7 @@
         @click="toggleButtonAboutUs(text.id)"
       )
         div
-          span.list__dot.for-applicants__dot.fa.fa-dot-circle-o(v-if="!info.withPopDownMenu")
+          span.list__dot.fa.fa-dot-circle-o(v-if="!info.withPopDownMenu")
           span(v-if="info.withPopDownMenu") {{ text.title }}
           span(v-else) {{ text }}
           span.list__arrow.fa.fa-caret-down(v-if="info.withPopDownMenu")

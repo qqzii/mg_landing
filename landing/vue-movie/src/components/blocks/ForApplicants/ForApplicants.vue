@@ -77,7 +77,7 @@ export default {
           price: '200€'
         },
         datascience: {
-          title: 'Заочное',
+          title: 'Заочное после 11 класса',
           text: [
             'Срок обучения - 3 года',
             '6 + 1 сессий',

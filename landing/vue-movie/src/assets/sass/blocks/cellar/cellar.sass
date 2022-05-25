@@ -1,7 +1,9 @@
+@import "src/assets/sass/mixins/fonts"
+@import "src/assets/sass/mixins/colors"
+
 .cellar
-  background: #111111
-  @media (min-width: 360px)
-    padding: 8px 20px
+  background: $night-black
+  padding: 8px 20px
   @media (min-width: 576px)
     padding: 10px 25px
   @media (min-width: 768px)
@@ -13,58 +15,60 @@
   @media (min-width: 1440px)
     padding: 25px 45px
 
+.cellar__content
+  display: flex
+  justify-content: space-between
+
 .cellar__up-content
   display: flex
   flex-direction: column
   align-items: center
   .cellar__requisites
-    font-family: 'Oswald', sans-serif
-    color: #FFFFFF
+    font-family: $oswald
+    color: $white
 
 
 .cellar__title
-  @media (min-width: 360px)
-    font-size: 16px
-    margin-bottom: 6px
-    font-weight: 400
+  font-size: 11px
+  margin-bottom: 6px
+  font-weight: 400
   @media (min-width: 576px)
-    font-size: 22px
+    font-size: 15px
     margin-bottom: 8px
   @media (min-width: 768px)
-    font-size: 28px
+    font-size: 18px
     margin-bottom: 10px
   @media (min-width: 992px)
-    font-size: 36px
+    font-size: 23px
     margin-bottom: 13px
   @media (min-width: 1200px)
-    font-size: 46px
+    font-size: 28px
     margin-bottom: 17px
     font-weight: 500
   @media (min-width: 1440px)
-    font-size: 56px
+    font-size: 34px
     margin-bottom: 20px
 
 .cellar__text
-  &:last-child
-    margin-bottom: 0
-  @media (min-width: 360px)
-    font-size: 10px
-    margin-bottom: 3px
-    font-weight: 200
+  font-size: 7px
+  margin-bottom: 3px
+  font-weight: 200
   @media (min-width: 576px)
-    font-size: 14px
+    font-size: 8px
     margin-bottom: 4px
   @media (min-width: 768px)
-    font-size: 17px
+    font-size: 10px
   @media (min-width: 992px)
-    font-size: 20px
+    font-size: 13px
     margin-bottom: 5px
   @media (min-width: 1200px)
-    font-size: 26px
+    font-size: 15px
     margin-bottom: 6px
   @media (min-width: 1440px)
-    font-size: 30px
+    font-size: 17px
     margin-bottom: 8px
+  &:last-child
+    margin-bottom: 0
 
 
 .cellar__down-content
@@ -74,24 +78,22 @@
 
 .socials__social
   border-radius: 50%
-  @media (min-width: 360px)
-    border: 1px solid #FFFFFF
-    margin: 12px 2px 7px 2px
+  border: 1px solid $white
+  margin: 12px 2px 7px 2px
   @media (min-width: 576px)
     margin: 14px 3px 9px 3px
   @media (min-width: 768px)
-    border: 2px solid #FFFFFF
+    border: 2px solid $white
     margin: 18px 4px 11px 4px
   @media (min-width: 992px)
     margin: 20px 5px 12px 5px
   @media (min-width: 1200px)
-    border: 3px solid #FFFFFF
+    border: 3px solid $white
     margin: 25px 6px 15px 6px
   @media (min-width: 1440px)
     margin: 35px 7px 20px 7px
   .social-facebook
-    @media (min-width: 360px)
-      font-size: 13px
+    font-size: 13px
     @media (min-width: 576px)
       font-size: 17px
     @media (min-width: 768px)
@@ -103,10 +105,9 @@
     @media (min-width: 1440px)
       font-size: 42px
     &:hover
-      color: #3B5998
+      color: $facebook-color
   .social-instagram
-    @media (min-width: 360px)
-      font-size: 14px
+    font-size: 14px
     @media (min-width: 576px)
       font-size: 19px
     @media (min-width: 768px)
@@ -118,10 +119,9 @@
     @media (min-width: 1440px)
       font-size: 46px
     &:hover
-      color: #E15A88
+      color: $instagram-color
   .social-telegram
-    @media (min-width: 360px)
-      font-size: 11px
+    font-size: 11px
     @media (min-width: 576px)
       font-size: 14px
     @media (min-width: 768px)
@@ -133,10 +133,9 @@
     @media (min-width: 1440px)
       font-size: 36px
     &:hover
-      color: #00BFFF
+      color: $telegram-color
   .social-vk
-    @media (min-width: 360px)
-      font-size: 12px
+    font-size: 12px
     @media (min-width: 576px)
       font-size: 17px
     @media (min-width: 768px)
@@ -148,15 +147,14 @@
     @media (min-width: 1440px)
       font-size: 42px
     &:hover
-      color: #597DA3
+      color: $vk-color
   span
     display: flex
     align-items: center
     justify-content: center
-    color: #FFFFFF
-    @media (min-width: 360px)
-      width: 20px
-      height: 20px
+    color: $white
+    width: 20px
+    height: 20px
     @media (min-width: 576px)
       width: 30px
       height: 30px
@@ -176,7 +174,7 @@
       cursor: pointer
 
 .cellar__rules
-  font-family: 'Oswald', sans-serif
+  font-family: $oswald
   font-weight: 100
-  color: #FFFFFF
+  color: $white
   text-align: center

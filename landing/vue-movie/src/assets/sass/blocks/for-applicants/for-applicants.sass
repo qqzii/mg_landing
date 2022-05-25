@@ -1,6 +1,8 @@
+@import "src/assets/sass/mixins/fonts"
+@import "src/assets/sass/mixins/colors"
+
 .for-applicants
-  @media (min-width: 360px)
-    margin-top: -540px
+  margin-top: -540px
   @media (min-width: 576px)
     margin-top: -40px
   @media (min-width: 768px)
@@ -15,11 +17,10 @@
     margin-top: -80px
 
 .for-applicants__title
-  color: #F57F31
-  font-family: 'Roboto Slab', serif
-  @media (min-width: 360px)
-    font-size: 26px
-    font-weight: 500
+  color: $orange
+  font-family: $roboto
+  font-size: 26px
+  font-weight: 500
   @media (min-width: 576px)
     font-size: 40px
     font-weight: 600
@@ -30,32 +31,11 @@
   @media (min-width: 1200px)
     font-size: 80px
 
-.for-applicants__dot
-  @media (min-width: 360px)
-    font-size: 6px
-    margin-top: 1px
-  @media (min-width: 576px)
-    font-size: 9px
-    margin-top: 2px
-  @media (min-width: 768px)
-    font-size: 8px
-    margin-top: 0
-  @media (min-width: 992px)
-    font-size: 9px
-    margin-top: 2px
-  @media (min-width: 1200px)
-    font-size: 12px
-    margin-top: 3px
-  @media (min-width: 1440px)
-    font-size: 14px
-    margin-top: 4px
-
 .for-applicants__direction
   display: flex
   justify-content: space-between
-  @media (min-width: 360px)
-    flex-direction: column
-    margin-top: 10px
+  flex-direction: column
+  margin-top: 10px
   @media (min-width: 576px)
     margin-top: 15px
   @media (min-width: 768px)
@@ -70,9 +50,8 @@
     margin-top: 35px
 
 .for-applicants__subtitle
-  font-family: 'Source Sans Pro', sans-serif
-  @media (min-width: 360px)
-    margin-top: 10px
+  font-family: $source
+  margin-top: 10px
   @media (min-width: 576px)
     margin-top: 15px
   @media (min-width: 1200px)

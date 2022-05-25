@@ -1,14 +1,16 @@
+@import "src/assets/sass/mixins/fonts"
+@import "src/assets/sass/mixins/colors"
+
 .footer
   background-size: cover
 
 .footer__mask
   width: 100%
   height: 100%
-  background-image: linear-gradient(#FFFFFF 9%, transparent 25%)
+  background-image: linear-gradient($white 9%, transparent 25%)
 
 .footer__content
-  @media (min-width: 360px)
-    padding: 70px 0 25px 0
+  padding: 70px 0 25px 0
   @media (min-width: 768px)
     padding: 100px 0 30px 0
   @media (min-width: 992px)
@@ -24,11 +26,10 @@
   display: flex
   flex-direction: column
   align-items: center
-  background: rgba(218, 174, 90, 0.23)
-  @media (min-width: 360px)
-    border-radius: 7px
-    padding: 15px
-    margin-top: 15px
+  background: $brown-orange
+  border-radius: 7px
+  padding: 15px
+  margin-top: 15px
   @media (min-width: 576px)
     padding: 20px 25px
     margin-top: 20px
@@ -46,20 +47,19 @@
     border-radius: 13px
     padding: 65px 70px
     margin-top: 55px
-
-.footer__call-us:hover
-  background: rgba(231, 145, 5, 0.3)
-  @media (min-width: 1200px)
-    transform: scale(1.02)
+  &:hover
+    transition: all 1s ease
+    background: rgba(203, 166, 123, 0.3)
+    @media (min-width: 1200px)
+      transform: scale(1.02)
 
 .call-us__text
   text-align: center
   text-transform: uppercase
-  font-family: 'Oswald', sans-serif
-  color: #FFFFFF
-  @media (min-width: 360px)
-    font-weight: 600
-    font-size: 18px
+  font-family: $oswald
+  color: $white
+  font-weight: 600
+  font-size: 18px
   @media (min-width: 576px)
     font-size: 20px
   @media (min-width: 768px)
@@ -75,9 +75,8 @@
 
 .call-us__form
   display: flex
-  @media (min-width: 360px)
-    flex-direction: column
-    margin-top: 15px
+  flex-direction: column
+  margin-top: 15px
   @media (min-width: 768px)
     margin-top: 20px
   @media (min-width: 992px)
@@ -89,14 +88,11 @@
   @media (min-width: 1200px)
     margin: 45px 0 50px 0
   .form__input
-    font-family: 'Oswald', sans-serif
-    &:hover
-      background-color: #F3EEEE
-    @media (min-width: 360px)
-      margin-top: 6px
-      padding: 3px 50px
-      border-radius: 4px
-      font-size: 12px
+    font-family: $oswald
+    margin-top: 6px
+    padding: 3px 50px
+    border-radius: 4px
+    font-size: 12px
     @media (min-width: 576px)
       padding: 4px 60px
       border-radius: 5px
@@ -122,16 +118,17 @@
       width: 42%
       padding: 8px 51px
       font-size: 42px
-  .complete-input
-    background-color: #F6DBBC
     &:hover
-      background-color: rgba(232, 178, 121, 0.95)
+      background-color: $pink
+  .complete-input
+    background-color: $semi-beige
+    &:hover
+      background-color: $beige
 
 .footer__contacts
   display: flex
   justify-content: space-around
-  @media (min-width: 360px)
-    margin-top: 15px
+  margin-top: 15px
   @media (min-width: 992px)
     margin-top: 25px
   @media (min-width: 1200px)
@@ -142,15 +139,13 @@
 .contacts__contact
   display: flex
   align-items: center
-
-.contacts__contact:hover
-  @media (min-width: 992px)
-    transform: scale(1.1)
+  &:hover
+    @media (min-width: 992px)
+      transform: scale(1.1)
 
 .contact__img
-  @media (min-width: 360px)
-    width: 20px
-    height: 17px
+  width: 20px
+  height: 17px
   @media (min-width: 576px)
     width: 25px
     height: 20px
@@ -172,12 +167,11 @@
 
 .contact__value
   text-transform: uppercase
-  font-family: 'Oswald', sans-serif
-  color: #FFFFFF
-  @media (min-width: 360px)
-    font-weight: 600
-    margin-left: 5px
-    font-size: 14px
+  font-family: $oswald
+  color: $white
+  font-weight: 600
+  margin-left: 5px
+  font-size: 14px
   @media (min-width: 576px)
     margin-left: 7px
     font-size: 19px

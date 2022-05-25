@@ -6,7 +6,8 @@
         div(ref="header")
           h3.invite__title Cambridge College of Computer Technology
           p.invite__text совместно с ЧУО "Мужская гимназия" объявляет ограниченный набор абитуриентов на 2022/23 учебный год
-          p.invite__text.mt-20 После 9 классов на специальности: Web-Design/FrontEnd, BackEnd, Data Science
+          p.invite__text.mt-20 После 9 классов на специальности:
+            span  Web-Design/FrontEnd, BackEnd, Data Science
           p.invite__text.invite__subtext
             span.fa.fa-graduation-cap.invite__subtext  Выдаем американский диплом
           button.invite__button(@click="scrollToChapter(callUsScroll)") Подать заявку

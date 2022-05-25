@@ -1,18 +1,17 @@
+@import "src/assets/sass/mixins/fonts"
+@import "src/assets/sass/mixins/colors"
+
 .direction
   display: flex
   flex-direction: column
   text-transform: uppercase
-  font-family: 'Oswald', sans-serif
-  color: #FFFFFF
-  background: rgba(180, 130, 80, 0.2)
-  margin: 0 auto
-  &:last-child
-    margin-bottom: 0
-  @media (min-width: 360px)
-    width: 55%
-    border-radius: 6px
-    padding: 15px
-    margin-bottom: 20px
+  font-family: $oswald
+  color: $white
+  background: $brown
+  width: 55%
+  border-radius: 6px
+  padding: 15px
+  margin: 0 auto 20px auto
   @media (min-width: 576px)
     padding: 35px 15px
     margin-bottom: 30px
@@ -30,7 +29,15 @@
   @media (min-width: 1440px)
     padding: 55px 14px
     border-radius: 12px
-  @media (min-width: 1920px)
+  &:last-child
+    margin-bottom: 0
+  &:hover
+    transition: all 1s ease
+    background: $pink-gray
+    @media (min-width: 768px)
+      transform: scale(1.02)
+    @media (min-width: 992px)
+      transform: scale(1.05)
 
 
 .directions-media
@@ -40,24 +47,16 @@
     flex-direction: row
     justify-content: space-between
 
-.direction:hover
-  background: rgba(197, 176, 176, 0.6)
-  @media (min-width: 768px)
-    transform: scale(1.02)
-  @media (min-width: 992px)
-    transform: scale(1.05)
-
 .direction-for-applicants
-  background-color: #F6DBBC
-  color: #000000
+  background-color: $semi-beige
+  color: $black
   .list__dot
-    color: #000000
+    color: $black
   &:hover
-    background-color: rgba(232, 178, 121, 0.95)
+    background-color: $beige
 
 .specialty__directions
-  @media (min-width: 360px)
-    margin-top: 30px
+  margin-top: 30px
   @media (min-width: 768px)
     margin-top: 40px
   @media (min-width: 992px)
@@ -67,9 +66,8 @@
 
 .direction__img
   align-self: center
-  @media (min-width: 360px)
-    width: 60px
-    height: 60px
+  width: 60px
+  height: 60px
   @media (min-width: 576px)
     width: 90px
     height: 90px
@@ -85,10 +83,9 @@
 
 .direction__title
   text-align: center
-  @media (min-width: 360px)
-    margin: 10px 0
-    font-weight: 400
-    font-size: 19px
+  margin: 10px 0
+  font-weight: 400
+  font-size: 19px
   @media (min-width: 576px)
     margin: 15px 0
     font-size: 26px
@@ -102,16 +99,16 @@
     margin: 10px 0 30px 0
     font-size: 32px
   @media (min-width: 1440px)
-    font-size: 42px
+    font-size: 39px
     font-weight: 500
   @media (min-width: 1920px)
     margin: 15px 0 40px 0
 
 .direction__text
-  @media (min-width: 360px)
-    font-weight: 400
-    font-size: 13px
-    margin-left: 13px
+  font-family: $source
+  font-weight: 400
+  font-size: 13px
+  margin-left: 13px
   @media (min-width: 576px)
     font-size: 17px
     margin-left: 23px
@@ -130,11 +127,10 @@
 
 .direction__price
   text-align: center
-  color: #F57F31
-  @media (min-width: 360px)
-    font-weight: 500
-    font-size: 30px
-    margin-top: 15px
+  color: $orange
+  font-weight: 500
+  font-size: 30px
+  margin-top: 15px
   @media (min-width: 576px)
     font-size: 37px
     margin-top: 20px

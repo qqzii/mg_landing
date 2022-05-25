@@ -1,3 +1,5 @@
+@import "src/assets/sass/mixins/colors"
+
 .mt-20
   margin-top: 20px
 
@@ -16,7 +18,17 @@
   align-items: center
 
 .color_orange
-  color: rgba(245, 127, 49, 0.75)
+  color: $dark-orange
 
 .background-color__black
-  background-color: #111111
+  background-color: $night-black
+
+.list__dot
+  color: $orange
+  margin-right: 5px
+  @media (min-width: 576px)
+    margin-right: 7px
+  @media (min-width: 992px)
+    margin-right: 10px
+  @media (min-width: 1200px)
+    margin-right: 12px

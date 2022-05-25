@@ -1,49 +1,50 @@
+@import "src/assets/sass/mixins/fonts"
+@import "src/assets/sass/mixins/colors"
+
 .info__row
   display: flex
   justify-content: space-between
-  font-family: 'Source Sans Pro', sans-serif
-  @media (min-width: 360px)
-    flex-direction: column
-    margin-top: 10px
-    border-bottom: solid 3px #F6DBBC
-    padding-bottom: 15px
+  font-family: $source
+  flex-direction: column
+  margin-top: 10px
+  border-bottom: solid 3px $semi-beige
+  padding-bottom: 15px
   @media (min-width: 576px)
     margin-top: 15px
     padding-bottom: 20px
   @media (min-width: 768px)
     flex-direction: row
     align-items: center
-    border-bottom: solid 4px #F6DBBC
+    border-bottom: solid 4px $semi-beige
     padding-bottom: 20px
   @media (min-width: 992px)
     padding-bottom: 25px
   @media (min-width: 1200px)
     margin-top: 20px
-    border-bottom: solid 5px #F6DBBC
+    border-bottom: solid 5px $semi-beige
     padding-bottom: 30px
   @media (min-width: 1440px)
     margin-top: 25px
-    border-bottom: solid 6px #F6DBBC
+    border-bottom: solid 6px $semi-beige
     padding-bottom: 40px
   @media (min-width: 1920px)
     margin-top: 30px
-    border-bottom: solid 7px #F6DBBC
+    border-bottom: solid 7px $semi-beige
     padding-bottom: 50px
-
-.info__row:last-child
-  border: 0
+  &:last-child
+    border: 0
 
 .row__title
-  color: #393939
-  @media (min-width: 360px)
-    font-size: 14px
-    font-weight: 500
+  color: $red-black
+  font-family: $oswald
+  font-size: 14px
+  font-weight: 400
   @media (min-width: 576px)
     font-size: 20px
   @media (min-width: 768px)
     width: 50%
     font-size: 22px
-    font-weight: 600
+    font-weight: 500
   @media (min-width: 992px)
     font-size: 24px
   @media (min-width: 1200px)
@@ -54,11 +55,10 @@
     font-size: 44px
 
 .row__text
-  color: #3A3A3A
-  @media (min-width: 360px)
-    margin-top: 10px
-    font-size: 10px
-    font-weight: 300
+  color: $semi-black
+  margin-top: 10px
+  font-size: 10px
+  font-weight: 300
   @media (min-width: 576px)
     margin-top: 15px
     font-size: 15px
@@ -84,8 +84,7 @@
   display: flex
   flex-direction: column
   justify-content: center
-  @media (min-width: 360px)
-    align-items: start
+  align-items: start
   @media (min-width: 768px)
     align-items: center
 
@@ -93,17 +92,13 @@
   display: flex
   justify-content: center
   flex-direction: column
-  background-color: #F6DBBC
-  font-family: 'Source Sans Pro', sans-serif
-  &:hover
-    cursor: pointer
-    background-color: rgba(232, 178, 121, 0.95)
-  @media (min-width: 360px)
-    margin: 2px 0
-    padding: 4px 30px
-    font-size: 10px
-    min-width: 180px
-    border-radius: 5px
+  background-color: $semi-beige
+  font-family: $source
+  margin: 2px 0
+  padding: 4px 30px
+  font-size: 10px
+  min-width: 180px
+  border-radius: 5px
   @media (min-width: 576px)
     padding: 5px 35px
     font-size: 16px
@@ -125,11 +120,13 @@
     padding: 8px 55px
     font-size: 24px
     min-width: 438px
+  &:hover
+    cursor: pointer
+    background-color: $beige
 
 .list__arrow
-  @media (min-width: 360px)
-    font-size: 11px
-    margin: 2px 0 0 5px
+  font-size: 11px
+  margin: 2px 0 0 5px
   @media (min-width: 576px)
     font-size: 16px
   @media (min-width: 768px)
@@ -146,9 +143,8 @@
 
 .list__pop-down-text_enable
   text-align: center
-  @media (min-width: 360px)
-    font-size: 7px
-    max-width: 180px
+  font-size: 7px
+  max-width: 180px
   @media (min-width: 576px)
     font-size: 10px
     max-width: 283px

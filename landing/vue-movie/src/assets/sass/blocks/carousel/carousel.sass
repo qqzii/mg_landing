@@ -1,19 +1,20 @@
+@import "src/assets/sass/mixins/fonts"
+@import "src/assets/sass/mixins/colors"
+
 .slide
   display: flex !important
   flex-direction: column
   align-items: center
   justify-content: center
   text-align: center
-  color: #FFFFFF
-  font-family: 'Oswald', sans-serif
+  color: $white
+  font-family: $oswald
   text-transform: uppercase
-
 
 .slide__img
   border-radius: 50%
-  @media (min-width: 360px)
-    width: 100px
-    height: 100px
+  width: 100px
+  height: 100px
   @media (min-width: 576px)
     width: 130px
     height: 130px
@@ -28,8 +29,7 @@
     height: 240px
 
 .slide__name
-  @media (min-width: 360px)
-    font-size: 20px
+  font-size: 20px
   @media (min-width: 576px)
     font-size: 25px
   @media (min-width: 768px)
@@ -40,8 +40,7 @@
     font-size: 46px
 
 .slide__subject
-  @media (min-width: 360px)
-    font-size: 15px
+  font-size: 15px
   @media (min-width: 576px)
     font-size: 18px
   @media (min-width: 768px)
@@ -53,34 +52,34 @@
 
 
 .slick-next, .slick-prev
-  &:before
-    opacity: 1 !important
-    @media (min-width: 992px)
-      font-size: 30px
-    @media (min-width: 1200px)
-      font-size: 40px
-    @media (min-width: 1440px)
-      font-size: 46px
+  font-size: 0
+  line-height: 0
+  position: absolute
+  top: 50%
+  width: 34px
+  height: 32px
+  padding: 0
+  transform: translateY(-50%)
+  cursor: pointer
+  border: 0
   &:hover
     &:before
-      color: #F57F31 !important
+      color: $orange !important
 
 .slick-dots
   li
     button
       &:before
-        @media (min-width: 360px)
-          font-size: 8px !important
-          color: #FFFFFF !important
-          opacity: 1 !important
+        font-size: 8px !important
+        color: $white !important
+        opacity: 1 !important
         @media (min-width: 1200px)
           font-size: 14px !important
   .slick-active
     button
       &:before
-        @media (min-width: 360px)
-          font-size: 11px !important
-          opacity: 1 !important
-          color: #F57F31 !important
+        font-size: 11px !important
+        opacity: 1 !important
+        color: $orange !important
         @media (min-width: 1200px)
           font-size: 17px !important

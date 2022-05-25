@@ -1,3 +1,6 @@
+@import "src/assets/sass/mixins/fonts"
+@import "src/assets/sass/mixins/colors"
+
 .specialty
   background-size: cover
   height: 1956px
@@ -11,32 +14,29 @@
 .specialty__top-mask
   width: 100%
   height: 100%
-  @media (min-width: 360px)
-    background-image: linear-gradient(#FFFFFF 0, transparent 4%)
+  background-image: linear-gradient($white 0, transparent 4%)
   @media (min-width: 992px)
-    background-image: linear-gradient(#FFFFFF 1%, transparent 6%)
+    background-image: linear-gradient($white 1%, transparent 6%)
   @media (min-width: 1440px)
-    background-image: linear-gradient(#FFFFFF 1%, transparent 9%)
+    background-image: linear-gradient($white 1%, transparent 9%)
 
 .specialty__bottom-mask
   width: 100%
   height: 100%
-  @media (min-width: 360px)
-    background-image: linear-gradient(transparent 67%, #FFFFFF 71%)
+  background-image: linear-gradient(transparent 67%, $white 71%)
   @media (min-width: 576px)
-    background-image: linear-gradient(transparent 93%, #FFFFFF 97%)
+    background-image: linear-gradient(transparent 93%, $white 97%)
   @media (min-width: 768px)
-    background-image: linear-gradient(transparent 96%, #FFFFFF 100%)
+    background-image: linear-gradient(transparent 96%, $white 100%)
   @media (min-width: 992px)
-    background-image: linear-gradient(transparent 75%, #FFFFFF 81%)
+    background-image: linear-gradient(transparent 75%, $white 81%)
   @media (min-width: 1200px)
-    background-image: linear-gradient(transparent 85%, #FFFFFF 91%)
+    background-image: linear-gradient(transparent 85%, $white 91%)
   @media (min-width: 1920px)
-    background-image: linear-gradient(transparent 88%, #FFFFFF 95%)
+    background-image: linear-gradient(transparent 88%, $white 95%)
 
 .specialty__content
-  @media (min-width: 360px)
-    padding-top: 85px
+  padding-top: 85px
   @media (min-width: 992px)
     padding-top: 105px
   @media (min-width: 1200px)
@@ -48,11 +48,10 @@
 
 .specialty-call-us__title
   text-transform: uppercase
-  font-family: 'Oswald', sans-serif
-  color: #FFFFFF
-  @media (min-width: 360px)
-    font-size: 26px
-    font-weight: 500
+  font-family: $roboto
+  color: $white
+  font-size: 26px
+  font-weight: 500
   @media (min-width: 576px)
     font-size: 40px
     font-weight: 600
@@ -64,11 +63,10 @@
     font-size: 80px
 
 .specialty__info
-  font-family: 'Oswald', sans-serif
+  font-family: $oswald
   text-transform: uppercase
-  color: #FFFFFF
-  @media (min-width: 360px)
-    margin-top: 20px
+  color: $white
+  margin-top: 20px
   @media (min-width: 576px)
     margin-top: 25px
   @media (min-width: 768px)
@@ -78,9 +76,8 @@
   @media (min-width: 1440px)
     margin-top: 60px
   .specialty__title
-    @media (min-width: 360px)
-      font-size: 20px
-      font-weight: 400
+    font-size: 20px
+    font-weight: 400
     @media (min-width: 576px)
       font-size: 28px
     @media (min-width: 768px)
@@ -92,12 +89,11 @@
       font-size: 50px
     @media (min-width: 1440px)
       font-size: 58px
-
   .specialty__text
-    @media (min-width: 360px)
-      font-size: 16px
-      font-weight: 300
-      margin-top: 10px
+    font-family: $source
+    font-size: 16px
+    font-weight: 400
+    margin-top: 10px
     @media (min-width: 576px)
       font-size: 22px
     @media (min-width: 768px)
@@ -112,8 +108,7 @@
       margin-top: 17px
 
 .specialty__carousel
-  @media (min-width: 360px)
-    margin-top: 25px
+  margin-top: 25px
   @media (min-width: 576px)
     margin-top: 35px
   @media (min-width: 1200px)

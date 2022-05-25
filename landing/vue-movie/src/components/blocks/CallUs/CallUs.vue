@@ -5,7 +5,7 @@
         .footer__content
           h3.specialty-call-us__title Подать заявку
           .footer__call-us
-            p.call-us__text Записаться на консультацию, вступительные экзамены можно по форме или по телефону, EMAIL
+            p.call-us__text Записаться на консультацию
             form.call-us__form
               input.form__input(
                 v-model="formName"

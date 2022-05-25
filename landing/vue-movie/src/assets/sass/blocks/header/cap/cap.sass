@@ -1,3 +1,6 @@
+@import "src/assets/sass/mixins/fonts"
+@import "src/assets/sass/mixins/colors"
+
 .cap
   position: fixed
   width: 100%
@@ -8,10 +11,9 @@
   display: flex
   justify-content: space-around
   align-items: center
-  color: #FFFFFF
+  color: $white
   text-transform: uppercase
-  @media (min-width: 360px)
-    height: 30px
+  height: 30px
   @media (min-width: 576px)
     height: 40px
   @media (min-width: 768px)
@@ -26,14 +28,13 @@
   align-items: center
   &:hover
     cursor: pointer
-    color: rgba(245, 127, 49, 0.75)
+    color: $dark-orange
 
 .logo__title
-  font-family: 'Bebas Neue', cursive
-  @media (min-width: 360px)
-    font-size: 28px
-    margin-top: 5px
-    font-weight: 100
+  font-family: $bebas
+  font-size: 28px
+  margin-top: 5px
+  font-weight: 100
   @media (min-width: 576px)
     font-size: 32px
     margin-top: 4px
@@ -50,10 +51,9 @@
     margin-top: 7px
 
 .logo__img
-  @media (min-width: 360px)
-    width: 25px
-    height: 20px
-    margin-left: 8px
+  width: 25px
+  height: 20px
+  margin-left: 8px
   @media (min-width: 768px)
     width: 32px
     height: 27px
@@ -75,10 +75,10 @@
   align-items: center
 
 .link-list__link
-  font-family: 'Oswald', sans-serif
+  font-family: $oswald
   &:hover
     cursor: pointer
-    color: rgba(245, 127, 49, 0.75)
+    color: $dark-orange
   &:last-child
     margin-right: 0
   @media (min-width: 992px)
@@ -101,47 +101,44 @@
   flex-direction: column
   align-items: center
   justify-content: center
-  font-family: 'Oswald', sans-serif
+  font-family: $oswald
   text-transform: uppercase
-  &:hover
-    cursor: pointer
-  @media (min-width: 360px)
-    font-size: 14px
+  font-size: 14px
   @media (min-width: 576px)
     font-size: 17px
   @media (min-width: 768px)
     font-size: 20px
+  &:hover
+    cursor: pointer
 
 .burger__link-list
   position: absolute
   display: flex
   flex-direction: column
   align-items: center
-  background-color: #F3EFEF
+  background-color: $pink-white
   width: 100%
   left: 0
   transform-origin: top
   transition: transform 0.6s ease-in-out
   overflow: hidden
+  top: 30px
+  @media (min-width: 576px)
+    top: 40px
+  @media (min-width: 768px)
+    top: 50px
   &:hover
     cursor: pointer
   .burger__link
     width: 100%
     text-align: center
-    font-family: 'Oswald', sans-serif
-    color: #000000
-    border-bottom: 1px solid #BDB0B0
-    @media (min-width: 360px)
-      padding: 5px 0
+    font-family: $oswald
+    color: $black
+    border-bottom: 1px solid $gray
+    padding: 5px 0
     @media (min-width: 768px)
       padding: 6px 0
     &:last-child
       border: 0
     &:hover
-      background-color: #E5DEDE
-  @media (min-width: 360px)
-    top: 30px
-  @media (min-width: 576px)
-    top: 40px
-  @media (min-width: 768px)
-    top: 50px
+      background-color: $dark-gray

@@ -1,39 +1,39 @@
+@import "src/assets/sass/mixins/fonts"
+@import "src/assets/sass/mixins/colors"
+
 .header
   background-size: cover
 
 .header__mask
   width: 100%
   height: 100%
-  @media (min-width: 360px)
-    padding-top: 110px
-    padding-bottom: 400px
-    background-image: linear-gradient(transparent 45%, #FFFFFF 54%)
+  padding-top: 110px
+  padding-bottom: 400px
+  background-image: linear-gradient(transparent 45%, $white 54%)
   @media (min-width: 576px)
     padding-top: 160px
     padding-bottom: 470px
-    background-image: linear-gradient(transparent 48%, #FFFFFF 61%)
+    background-image: linear-gradient(transparent 48%, $white 61%)
   @media (min-width: 768px)
     padding-top: 210px
-    background-image: linear-gradient(transparent 52%, #FFFFFF 64%)
+    background-image: linear-gradient(transparent 52%, $white 64%)
   @media (min-width: 992px)
     padding-top: 260px
     padding-bottom: 520px
-    background-image: linear-gradient(transparent 55%, #FFFFFF 70%)
+    background-image: linear-gradient(transparent 55%, $white 70%)
   @media (min-width: 1200px)
     padding-top: 275px
   @media (min-width: 1440px)
     padding-top: 280px
-    background-image: linear-gradient(transparent 58%, #FFFFFF 72%)
+    background-image: linear-gradient(transparent 58%, $white 72%)
 
 .invite__title
-  color: #FFFFFF
-  font-family: 'Source Sans Pro', sans-serif
+  color: $white
+  font-family: $source
   text-transform: uppercase
-  @media (min-width: 360px)
-    font-weight: 400
-    font-size: 19px
+  font-weight: 500
+  font-size: 19px
   @media (min-width: 576px)
-    font-weight: 500
     font-size: 23px
   @media (min-width: 768px)
     font-size: 29px
@@ -46,12 +46,11 @@
     font-size: 55px
 
 .invite__text
-  color: #FFFFFF
-  font-family: 'Oswald', sans-serif
+  color: $white
+  font-family: $source
   text-transform: uppercase
-  @media (min-width: 360px)
-    font-size: 14px
-    font-weight: 200
+  font-size: 14px
+  font-weight: 400
   @media (min-width: 576px)
     font-size: 17px
   @media (min-width: 768px)
@@ -62,12 +61,13 @@
     font-size: 31px
   @media (min-width: 1440px)
     font-size: 36px
+  span
+    font-weight: 600
 
 .invite__subtext
-  color: #efad8e
-  @media (min-width: 360px)
-    font-size: 10px
-    font-weight: 600
+  color: $lite-orange
+  font-size: 10px
+  font-weight: 600
   @media (min-width: 576px)
     font-size: 12px
   @media (min-width: 768px)
@@ -81,16 +81,15 @@
 
 .invite__button
   text-transform: uppercase
-  color: #FF9A2D
-  font-family: 'Oswald', sans-serif
-  background: linear-gradient(#F2F3F6, #FFFFFF)
-  @media (min-width: 360px)
-    padding: 5px 25px
-    margin-top: 15px
-    font-weight: 500
-    box-shadow: 0 0 14px rgba(255, 154, 45, 0.5)
-    border-radius: 4px
-    font-size: 15px
+  color: $bright-orange
+  font-family: $oswald
+  background: linear-gradient($blue-white, $white)
+  padding: 5px 25px
+  margin-top: 15px
+  font-weight: 500
+  box-shadow: 0 0 14px rgba(255, 154, 45, 0.5)
+  border-radius: 4px
+  font-size: 15px
   @media (min-width: 576px)
     margin-top: 18px
     font-size: 19px
@@ -119,16 +118,15 @@
     font-size: 42px
   @media (min-width: 1920px)
     box-shadow: 0 0 45px rgba(255, 154, 45, 0.65)
-
-.invite__button:hover
-  cursor: pointer
-  color: #EC7E05
-  transform: scale(1.03)
-  @media (min-width: 360px)
+  &:hover
+    cursor: pointer
+    color: #EC7E05
+    transform: scale(1.03)
     box-shadow: 5px 5px 15px rgba(236, 126, 5, 0.4)
-  @media (min-width: 768px)
-    box-shadow: 10px 0 30px rgba(236, 126, 5, 0.5)
-  @media (min-width: 1200px)
-    box-shadow: 10px 0 45px rgba(236, 126, 5, 0.6)
-  @media (min-width: 1920px)
-    box-shadow: 10px 0 50px rgba(236, 126, 5, 0.6)
+    transition: all 1s ease
+    @media (min-width: 768px)
+      box-shadow: 10px 0 30px rgba(236, 126, 5, 0.5)
+    @media (min-width: 1200px)
+      box-shadow: 10px 0 45px rgba(236, 126, 5, 0.6)
+    @media (min-width: 1920px)
+      box-shadow: 10px 0 50px rgba(236, 126, 5, 0.6)

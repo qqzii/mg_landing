@@ -6,7 +6,7 @@
       .about-us__organizations
         h4.row__title Студенческие организации
         .organizations__description
-          p.organizations__text Каждый сможет найти себе занятие по душе не только во время обучения, но и в свободное время
+          p.organizations__text Каждый сможет найти занятие по душе не только во время обучения, но и в свободное время
           .organizations__list(v-for="organization in organizationList")
             span.list__dot.fa.fa-dot-circle-o
             span {{ organization }}
@@ -34,7 +34,7 @@ export default {
             {
               id: 1,
               title: 'Передовые образовательные методики',
-              tip: 'Преподаем по методикам разработанными в MIT'
+              tip: 'Преподаем по методикам, разработанными в MIT'
             },
             {
               id: 2,
