@@ -28,7 +28,7 @@
               h4.contact__value +375-29-348-01-83
             .contacts__contact
               img.contact__img(:src="`../../../assets/images/email.png`")
-              h4.contact__value itsimpe@gmail.com
+              h4.contact__value ccct@m-college.online
 </template>
 
 <script>
