@@ -25,10 +25,10 @@
           .footer__contacts
             .contacts__contact
               img.contact__img(:src="`../../../assets/images/phone.png`")
-              h4.contact__value +375-29-348-01-83
+              a.contact__value(:href="`tel:+375293480183`") +375-29-348-01-83
             .contacts__contact
               img.contact__img(:src="`../../../assets/images/email.png`")
-              h4.contact__value ccct@m-college.online
+              a.contact__value(:href="`mailto:ccct@m-college.online`") ccct@m-college.online
 </template>
 
 <script>
