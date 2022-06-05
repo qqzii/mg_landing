@@ -6,22 +6,6 @@
           h3.specialty-call-us__title Подать заявку
           .footer__call-us
             p.call-us__text Записаться на консультацию
-            //form.call-us__form
-            //  input.form__input(
-            //    v-model="formName"
-            //    autocomplete="off"
-            //    type='text'
-            //    placeholder="Ваше имя"
-            //    :class="{'complete-input' : formName}"
-            //  )
-            //  input.form__input(
-            //    v-model="formPhone"
-            //    autocomplete="off"
-            //    type='text'
-            //    placeholder="Телефон"
-            //    :class="{'complete-input' : formPhone}"
-            //  )
-            //button.invite__button(@click="sendData") Подать заявку
             a.invite__button(href="https://forms.gle/L6xxG79LJ6mkSvjw6") Подать заявку
           .footer__contacts
             .contacts__contact
